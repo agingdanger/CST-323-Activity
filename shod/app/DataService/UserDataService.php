@@ -19,7 +19,7 @@ class UserDataService
         $scripture = $verse->getVerse();
 
        
-        $sql = "INSERT INTO `VERSES` (`ID`, `VERSE`) VALUES('', '$scripture')";
+        $sql = "INSERT INTO `verses` (`ID`, `VERSE`) VALUES('', '$scripture')";
         
         if (mysqli_query($connection, $sql))
         {
@@ -27,7 +27,7 @@ class UserDataService
         }
         else
         {
-            echo "User not added";
+            echo "Verse not added";
             echo " Error: " . $sql . "<br>" . mysqli_error($connection);
         }
         return false;
