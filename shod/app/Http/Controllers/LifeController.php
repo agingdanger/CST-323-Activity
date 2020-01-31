@@ -37,7 +37,7 @@ class LifeController extends Controller
         
         $verse = file_get_contents("https://bible-api.com/" . $books[$booknum] . "+1:10?callback=func");
         $scripture = new Verse($verse);
-        //$serve = $Business->register($scripture);
+        $serve = $Business->register($scripture);
         
         return view('home') ->with('response', $verse);
     }
