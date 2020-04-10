@@ -7,12 +7,14 @@ use Illuminate\Http\Request;
 
 use App\BusinessService\UserBusinessService;
 use App\Model\Verse;
+use App\Utility\MyLogger1;
 use App\Utility\MyLogger2;
 
 class LifeController extends Controller
 {
     public function onGenerate(Request $request)
     {
+        MyLogger1::info("Entering LifeController.index()");
         MyLogger2::info("Entering LifeController.index()");
         
         $Business = new UserBusinessService();
