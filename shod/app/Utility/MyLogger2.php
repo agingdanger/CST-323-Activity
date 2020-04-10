@@ -15,6 +15,7 @@ class MyLogger2 implements ILogger
         {
             self::$logger = new Logger('loggly');
             self::$logger->pushHandler(new LogglyHandler('932853ca-d111-48b1-a9ff-3bd82a217a14/tag/cst323_logfile_heroku_upload_php', Logger::DEBUG));
+            self::$logger->addInfo("Info test from monolog");
         }
         return self::$logger;
     }
