@@ -16,7 +16,7 @@ class MyLogger1 implements ILogger
         if (self::$logger == null)
         {
             self::$logger = new Logger('MyApp');
-            $stream = new StreamHandler('storage/logs/myapp.log', Logger::DEBUG);
+            $stream = new StreamHandler(__DIR__.'/../../storage/logs/myapp.log', Logger::DEBUG);
             $stream->setFormatter(new LineFormatter("%datetime% : %level_name% : %message% %context%\n", "g:iA n/j/Y"));
             self::$logger->pushHandler($stream);
         }
